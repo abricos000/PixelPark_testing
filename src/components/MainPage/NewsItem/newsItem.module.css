@@ -1,0 +1,81 @@
+.item {
+    margin: 10px 0;
+    border-top: 1px solid #dcdcdc;
+    min-height: 150px;
+    word-wrap: break-word;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.title {
+    color: #dcdcdc;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.title:hover {
+    color: aquamarine;
+}
+
+.userName {
+    color: #34cf39;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.container{
+    display: flex;
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+
+} 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .item {
+        margin: 10px 0;
+        min-height: 120px;
+        padding: 10px;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .userName {
+        margin-right: 14px;
+        font-size: 15px;
+    }
+} 
+@media screen and (min-width: 420px) and (max-width: 768px){
+    .item {
+        margin: 10px 0;
+        min-height: 80px;
+        padding: 10px;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .userName {
+        margin-right: 14px;
+        font-size: 13px;
+    }
+} 
+@media screen and (max-width: 420px){
+    .item {
+        margin: 10px 0;
+        min-height: 60px;
+        padding: 7px;
+    }
+    .title {
+        font-size: 13px;
+    }
+    .userName {
+        margin-right: 10px;
+        font-size: 10px;
+
+    }
+
+}

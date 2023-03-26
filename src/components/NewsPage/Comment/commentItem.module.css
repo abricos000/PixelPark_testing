@@ -1,0 +1,101 @@
+.item {
+    border-left: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 30px 10px 10px;
+    color: #aaaaaa;
+    min-height: 50px;
+    word-wrap: break-word ;
+    font-size: 18px;
+    margin: 0 15px 15px;
+}
+
+.delete {
+    border-left: 1px solid #fd0101;
+    border-bottom: 1px solid #fd0101;
+    padding: 10px;
+    color: #aaaaaa;
+    max-height: 40px;
+    word-wrap: break-word ;
+    font-size: 18px;
+}
+.btn {
+    color: red;
+    margin-top: 20px;
+}
+.loading {
+    color: #fff;
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+    .item {
+        padding: 30px 10px 10px;
+        min-height: 50px;
+        font-size: 16px;
+    }
+    
+    .delete {
+        padding: 10px;
+        max-height: 40px;
+        font-size: 16px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+    .loading {
+    }
+} 
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .item {
+        padding: 10px 7px;
+        min-height: 35px;
+        font-size: 14px;
+    }
+    
+    .delete {
+        padding: 15px 7px 7px;
+        min-height: 35px;
+        font-size: 14px;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+    .loading {
+    }
+} 
+@media screen and (min-width: 420px) and (max-width: 768px){
+    .item {
+        padding: 10px 4px;
+        min-height: 20px;
+        font-size: 10px;
+    }
+    
+    .delete {
+        padding: 10px 4px 4px;
+        min-height: 20px;
+        font-size: 10px;
+    }
+    .btn {
+        margin-top: 6px;
+    }
+    .loading {
+    }
+} 
+@media screen and (max-width: 420px){
+    .item {
+        padding: 5px;
+        min-height: 20px;
+        font-size: 8px;
+    }
+    
+    .delete {
+        padding: 10px 4px 4px;
+        min-height: 20px;
+        font-size: 8px;
+    }
+    .btn {
+        margin-top: 6px;
+    }
+    .loading {
+    }
+}
