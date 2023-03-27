@@ -1,22 +1,38 @@
-
-
-
-
-
+.text{
+    font-size: 30px;
+    color: var(--gray-150);
+    text-align: center;
+    padding-top: 25px;
+}
 
 
 @media screen and (min-width: 1024px) and (max-width: 1200px){
-
+    .text{
+        font-size: 25px;
+        padding-top: 15px;
+    }
 } 
 @media screen and (min-width: 768px) and (max-width: 1024px){
-
+    .text{
+        font-size: 20px;
+        padding-top: 15px;
+    }
 } 
 @media screen and (min-width: 420px) and (max-width: 768px){
-
+    .text{
+        font-size: 17px;
+        padding-top: 15px;
+    }
 } 
 @media screen and (min-width: 340px) and (max-width: 420px){
-
+    .text{
+        font-size: 15px;
+        padding-top: 15px;
+    }
 }
 @media screen and (max-width: 340px){
-
+    .text{
+        font-size: 12px;
+        padding-top: 15px;
+    }
 }

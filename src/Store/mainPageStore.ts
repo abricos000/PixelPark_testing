@@ -1,24 +1,13 @@
 import { makeAutoObservable } from 'mobx'
-import FetchService from '../../API/fetchServise'
-
-
-interface IStory {
-  by: string
-  descendants: number
-  id: number
-  kids: []
-  score: number
-  time: number
-  title: string
-  type: string
-  url: string
-}
+import { timeConverter } from '../match'
+import { IStory } from '../types/types'
+import FetchService from './../API/fetchServise'
 
 
 class MainPageStore {
     
     news: IStory[] = []
-    isLoadind: boolean = true
+    isLoadinп: boolean = true
     error: boolean = false
 
     constructor() {
@@ -30,27 +19,27 @@ class MainPageStore {
             this.news = []
             this.error = false;
             if (bool) {
-                this.isLoadind = false;
+                this.isLoadinп = false;
             }
             this.getNews(await FetchService.getDataId());
         } catch (error) {
             if (bool) {
-                this.isLoadind = true;
+                this.isLoadinп = true;
             }
             this.error = true;
         } 
     }
 
     getNews (idArray: number[]) {
-        // allSettled посмотреть 
         Promise.all(idArray.map((element: number) => FetchService.getStory(element)))
         .then(res => this.sortNews(res))
         .catch(() => this.error = true)
-        .finally(() => this.isLoadind = true)
+        .finally(() => this.isLoadinп = true)
     }
 
     sortNews(data: IStory[]) {
-        this.news = [...data].sort((a, b) => a.time - b.time)
+        this.news = [...data].sort((a, b) => b.time - a.time)
+        this.news = this.news.map(el => ({...el, timeData: timeConverter(el.time as number)}))
     }
 
     initAutoInterval(){  

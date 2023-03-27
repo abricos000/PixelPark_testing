@@ -4,9 +4,10 @@ import style from './notFoundPage.module.css'
 
 const NotFoundPage = () => (
 
-  <div className='main__content'>Страницы не существует, перейти на главную  
+  <div className={style.text}> 
+    Nothing found, go to main 
     {' '}
-    <Link to={'/'}>страницу</Link>
+    <Link to={'/'}>page</Link>
 
     
   </div>

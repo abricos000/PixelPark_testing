@@ -2,15 +2,15 @@ import React, { useEffect } from 'react';
 import Loader from '../loader/Loader';
 import NewsItem from './NewsItem/NewsItem';
 import style from './mainPage.module.css'
-import mainPageStore from '../Store/mainPageStore'; 
+import mainPageStore from '../../Store/mainPageStore'; 
 import { observer } from 'mobx-react';
+import NotFoungPage from '../NotFoungErrorPage/NotFoungErrorPage';
 
 
 const MainPage = observer (() => {
 
-  const  {news, isLoadind, error} = mainPageStore
+  const  {news, isLoadinп: isLoadind, error} = mainPageStore
   
-
   useEffect(() => {
 
     mainPageStore.getIdNews(true)
@@ -19,6 +19,9 @@ const MainPage = observer (() => {
     return () => clearInterval(a)
   }, [])
 
+if (error) {
+  return <NotFoungPage click={() => mainPageStore.getIdNews(true)}>refresh the page</NotFoungPage>
+}
 
   return (
     <>
@@ -32,7 +35,9 @@ const MainPage = observer (() => {
         </div>
       </section>
 
-      <button onClick={() => mainPageStore.getIdNews(true)} className={style.upDate}>upDate News</button>
+      <button onClick={() => mainPageStore.getIdNews(true)} className={style.upDate}>
+        upDate News
+      </button>
 
       <section className={style.news}>
 
@@ -40,8 +45,6 @@ const MainPage = observer (() => {
           ? news.map(el => <NewsItem key={el.id} story={el} />) 
           : <Loader/>
         }
-
-        {error && <div className={style.text}>Произошла ошибка</div>}
 
       </section>
     </>

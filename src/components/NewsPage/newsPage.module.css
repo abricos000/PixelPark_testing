@@ -2,34 +2,70 @@
     position: fixed;
     top: 20px;
     z-index: 1;
-    background: #5150504d;
-    color: #FFF;
+    background: var(--transparent-gray);
+    color: var(--white);
     border: none;
     height: 30px;
     width: 150px;
     left: calc(50% - 500px);
     cursor: pointer;
     outline: none;
+    font-size: 14px;
 }
-
-
-
+.noComment{
+    color: var(--white);
+}
 
 
 @media screen and (min-width: 1024px) and (max-width: 1200px){
-
+    .upDate {
+        top: 20px;
+        z-index: 1;
+        height: 30px;
+        width: 150px;
+        left: calc(50% - 450px);
+        font-size: 14px;
+    }
 } 
 @media screen and (min-width: 768px) and (max-width: 1024px){
-
+    .upDate {
+        top: 15px;
+        z-index: 1;
+        height: 25px;
+        width: 130px;
+        left: calc(50% - 350px);
+        font-size: 12px;
+    }
 } 
 @media screen and (min-width: 420px) and (max-width: 768px){
-
+    .upDate {
+        top: 15px;
+        z-index: 1;
+        height: 20px;
+        width: 90px;
+        left: calc(50% - 200px);
+        font-size: 9px;
+    }
 } 
 @media screen and (min-width: 340px) and (max-width: 420px){
-
+    .upDate {
+        top: 10px;
+        z-index: 1;
+        height: 20px;
+        width: 70px;
+        left: calc(50% - 160px);
+        font-size: 8px;
+    }
 }
 @media screen and (max-width: 340px){
-
+    .upDate {
+        top: 10px;
+        z-index: 1;
+        height: 20px;
+        width: 70px;
+        left: calc(50% - 150px);
+        font-size: 8px;
+    }
 }
 
 

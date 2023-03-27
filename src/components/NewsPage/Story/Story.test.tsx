@@ -10,9 +10,13 @@ const data = {
     kids: [],
     score: 0,
     time: 0,
+    timeData: '',
     title: 'stringggg',
     type: 'string',
-    url: 'string'
+    url: 'string',
+
+    visible: false
+
 }
 
     it('Story renders', () => {

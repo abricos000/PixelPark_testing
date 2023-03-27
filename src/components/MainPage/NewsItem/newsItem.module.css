@@ -1,6 +1,6 @@
 .item {
     margin: 10px 0;
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid var(--gray-100);
     min-height: 150px;
     word-wrap: break-word;
     padding: 15px;
@@ -12,17 +12,17 @@
 }
 
 .title {
-    color: #dcdcdc;
+    color: var(--gray-100);
     font-weight: normal;
     font-size: 20px;
 }
 
 .title:hover {
-    color: aquamarine;
+    color: var(--green-50);
 }
 
 .userName {
-    color: #34cf39;
+    color: var(--green-100);
     margin-right: 20px;
     font-size: 18px;
 }

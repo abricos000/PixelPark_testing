@@ -16,7 +16,7 @@
     max-width: 40%;
     display: flex;
     justify-content: center;
-    color: #FFF;
+    color: var(--white);
     font-size: 20px;
     font-weight: bold;
     line-height: 55px;
@@ -34,17 +34,16 @@
     position: fixed;
     top: 20px;
     z-index: 1;
-    background: #5150504d;
-        color: #FFF;
+    background: var(--transparent-gray);
+    color: var(--white);
     border: none;
     height: 30px;
     width: 150px;
     left: calc(50% - 500px);
     cursor: pointer;
     outline: none;
+    font-size: 14px;
 }
-
-
 
 
 @media screen and (min-width: 1024px) and (max-width: 1200px){
@@ -54,6 +53,14 @@
     .text {
         font-size: 18px;
         line-height: 38px;
+    }
+    .upDate {
+        top: 20px;
+        z-index: 1;
+        height: 30px;
+        width: 150px;
+        left: calc(50% - 450px);
+        font-size: 14px;
     }
 
 } 
@@ -67,6 +74,14 @@
     .text {
         font-size: 17px;
         line-height: 31px;
+    }
+    .upDate {
+        top: 15px;
+        z-index: 1;
+        height: 25px;
+        width: 130px;
+        left: calc(50% - 350px);
+        font-size: 12px;
     }
 } 
 @media screen and (min-width: 420px) and (max-width: 768px){
@@ -84,6 +99,14 @@
         font-weight: normal;
         max-width: 100%;
     }
+    .upDate {
+        top: 15px;
+        z-index: 1;
+        height: 20px;
+        width: 90px;
+        left: calc(50% - 200px);
+        font-size: 9px;
+    }
 } 
 @media screen and (max-width: 420px){
     .news {
@@ -99,5 +122,13 @@
         line-height: 16px;
         font-weight: normal;
         max-width: 100%;
+    }
+    .upDate {
+        top: 10px;
+        z-index: 1;
+        height: 20px;
+        width: 70px;
+        left: calc(50% - 150px);
+        font-size: 8px;
     }
 }
