@@ -8,8 +8,6 @@ import Story from './Story/Story'
 import style from './newsPage.module.css'
 import NotFoungErrorPage from '../NotFoungErrorPage/NotFoungErrorPage'
 
-
-
 const NewsPage = observer (() => {
 
   const {id} = useParams()
