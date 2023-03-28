@@ -40,9 +40,6 @@ const NewsPage = observer (() => {
       <button className={style.upDate} onClick={() => newsPageStore.getCommentsById(Number(id))}>
         UpDate Comment
       </button>
-
-
-
       {story.kids 
         ? commentsTree.map(el => <CommentItem key={el.id} comment={el} />) 
         : <div className={style.noComment}>комментариев нет </div>
