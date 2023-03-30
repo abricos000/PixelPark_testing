@@ -5,8 +5,7 @@ export interface IComment {
     descendants: number
     id: number
     kids: number[]
-    status: boolean
-    timeData: string
+    isExpanded: boolean
     parent: number
     score: number
     time: number
@@ -24,9 +23,11 @@ export interface IStory {
   kids?: number[]
   score: number
   time: number
-  timeData: string
   title: string
   type: string
   url: string
   visible: boolean
+  error?: string
 }
+
+export type idRequest = string | number 

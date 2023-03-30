@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Loader from '../loader/Loader';
+import Loader from '../Loader/Loader';
 import NewsItem from './NewsItem/NewsItem';
 import style from './mainPage.module.css'
 import mainPageStore from '../../Store/mainPageStore'; 
@@ -9,19 +9,19 @@ import NotFoungPage from '../NotFoungErrorPage/NotFoungErrorPage';
 
 const MainPage = observer (() => {
 
-  const  {news, isLoadinп: isLoadind, error} = mainPageStore
+  const  {news, isLoading, error} = mainPageStore
   
   useEffect(() => {
 
-    mainPageStore.getIdNews(true)
-    let a = mainPageStore.initAutoInterval()
+    mainPageStore.getIdNews()
+    let upDateNews = mainPageStore.initAutoInterval()
 
-    return () => clearInterval(a)
+    return () => clearInterval(upDateNews)
   }, [])
 
-if (error) {
-  return <NotFoungPage click={() => mainPageStore.getIdNews(true)}>refresh the page</NotFoungPage>
-}
+  if (error ) {
+    return <NotFoungPage click={() => mainPageStore.getIdNews()}>refresh the page</NotFoungPage>
+  }
 
   return (
     <>
@@ -35,21 +35,18 @@ if (error) {
         </div>
       </section>
 
-      <button onClick={() => mainPageStore.getIdNews(true)} className={style.upDate}>
+      <button onClick={() => mainPageStore.getIdNews()} className={style.upDate}>
         upDate News
       </button>
 
       <section className={style.news}>
-
-        {isLoadind 
+        {isLoading 
           ? news.map(el => <NewsItem key={el.id} story={el} />) 
           : <Loader/>
         }
-
       </section>
     </>
   );
 })
-
 
 export default MainPage;

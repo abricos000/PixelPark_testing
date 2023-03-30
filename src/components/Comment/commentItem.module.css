@@ -8,7 +8,6 @@
     font-size: 18px;
     margin: 0 0 2px 15px;
 }
-
 .delete {
     border-left: 1px solid var(--color-red-200);
     border-bottom: 1px solid var(--color-red-200);
@@ -28,7 +27,7 @@
     font-size: 14px;
     outline: none;
 }
-.wrapperBtn{
+.wrapperBtn {
     color: var(--gray-120);
     font-size: 18px;
 }
@@ -42,13 +41,12 @@
 }
 
 
-@media screen and (min-width: 1024px) and (max-width: 1200px){
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     .item {
         padding: 30px 0 10px 10px;
         min-height: 50px;
         font-size: 16px;
     }
-    
     .delete {
         padding: 10px;
         max-height: 40px;
@@ -58,20 +56,19 @@
         margin-top: 20px;
         font-size: 12px;
     }
-    .wrapperBtn{
+    .wrapperBtn {
         font-size: 15px;
     }
     .time {
         font-size: 14px;
     }
 } 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .item {
         padding: 10px 7px;
         min-height: 35px;
         font-size: 14px;
     }
-    
     .delete {
         padding: 10px 7px;
         min-height: 35px;
@@ -88,13 +85,12 @@
         font-size: 12px;
     }
 } 
-@media screen and (min-width: 420px) and (max-width: 768px){
+@media screen and (min-width: 420px) and (max-width: 768px) {
     .item {
         padding: 10px 4px;
         min-height: 20px;
         font-size: 10px;
     }
-    
     .delete {
         padding: 8px 4px 4px;
         min-height: 20px;
@@ -104,14 +100,14 @@
         margin-top: 6px;
         font-size: 8px;
     }
-    .wrapperBtn{
+    .wrapperBtn {
         font-size: 9px;
     }
     .time {  
         font-size: 7px;
     }
 } 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 420px) {
     .item {
         padding: 5px;
         min-height: 20px;
@@ -126,7 +122,7 @@
         margin-top: 6px;
         font-size: 6px;
     }
-    .wrapperBtn{
+    .wrapperBtn {
         font-size: 7px;
     }
     .time {

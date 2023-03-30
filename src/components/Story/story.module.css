@@ -7,12 +7,12 @@
     text-align: center;
     font-size: 30px;
 }
-.text{
+.text {
     color: var(--gray-100);
     margin-bottom: 15px;
     font-size: 18px;
 }
-.url{
+.url {
     color: var(--gray-100);
     text-decoration: none;
     font-size: 18px;
@@ -29,23 +29,23 @@
 }
 
 
-@media screen and (min-width: 1024px) and (max-width: 1200px){
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     .title {
         font-size: 25px;
     }
 } 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .section {
         padding: 10px;
     }
     .title {
         font-size: 22px;
     }
-    .text{
+    .text {
         margin-bottom: 13px;
         font-size: 16px;
     }
-    .url{
+    .url {
         font-size: 16px;
     }
     .length {
@@ -53,18 +53,18 @@
         font-size: 18px;
     }
 } 
-@media screen and (min-width: 420px) and (max-width: 768px){
+@media screen and (min-width: 420px) and (max-width: 768px) {
     .section {
         padding: 10px;
     }
     .title {
         font-size: 18px;
     }
-    .text{
+    .text {
         margin-bottom: 8px;
         font-size: 12px;
     }
-    .url{
+    .url {
         font-size: 12px;
     }
     .length {
@@ -72,18 +72,18 @@
         font-size: 14px;
     }
 } 
-@media screen and (min-width: 340px) and (max-width: 420px){
+@media screen and (min-width: 340px) and (max-width: 420px) {
     .section {
         padding: 5px;
     }
     .title {
         font-size: 16px;
     }
-    .text{
+    .text {
         margin-bottom: 5px;
         font-size: 10px;
     }
-    .url{
+    .url {
         font-size: 10px;
     }
     .length {
@@ -91,18 +91,18 @@
         font-size: 12px;
     }
 }
-@media screen and (max-width: 340px){
+@media screen and (max-width: 340px) {
     .section {
         padding: 5px;
     }
     .title {
         font-size: 16px;
     }
-    .text{
+    .text {
         margin-bottom: 5px;
         font-size: 10px;
     }
-    .url{
+    .url {
         font-size: 10px;
     }
     .length {

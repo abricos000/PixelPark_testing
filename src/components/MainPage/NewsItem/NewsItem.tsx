@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { IStory } from '../../../types/types'
+import { IStory } from '../../../Types/types'
+import { timeConverter } from '../../../Utils/time-translation'
 import style from './newsItem.module.css'
 
 
@@ -9,9 +10,8 @@ type Props = {
 }
 
 const NewsItem = ({ story }: Props) => (
-
+  
   <div className={style.item}>
-
     <Link to={`/news/${story.id}`} className={style.link}>
       <h2 className={style.title}>{story.title}</h2>
     </Link>
@@ -20,7 +20,7 @@ const NewsItem = ({ story }: Props) => (
       <div className={style.userName}>{story.by}</div>
 
       <div className={style.userName}>
-        {story.timeData}
+        {timeConverter(story.time)}
       </div>
       
       <div className={style.userName}>{story.score}</div>

@@ -12,12 +12,12 @@
     outline: none;
     font-size: 14px;
 }
-.noComment{
+.noComment {
     color: var(--white);
 }
 
 
-@media screen and (min-width: 1024px) and (max-width: 1200px){
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     .upDate {
         top: 20px;
         z-index: 1;
@@ -27,7 +27,7 @@
         font-size: 14px;
     }
 } 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .upDate {
         top: 15px;
         z-index: 1;
@@ -37,7 +37,7 @@
         font-size: 12px;
     }
 } 
-@media screen and (min-width: 420px) and (max-width: 768px){
+@media screen and (min-width: 420px) and (max-width: 768px) {
     .upDate {
         top: 15px;
         z-index: 1;
@@ -47,7 +47,7 @@
         font-size: 9px;
     }
 } 
-@media screen and (min-width: 340px) and (max-width: 420px){
+@media screen and (min-width: 340px) and (max-width: 420px) {
     .upDate {
         top: 10px;
         z-index: 1;
@@ -57,7 +57,7 @@
         font-size: 8px;
     }
 }
-@media screen and (max-width: 340px){
+@media screen and (max-width: 340px) {
     .upDate {
         top: 10px;
         z-index: 1;
@@ -67,7 +67,3 @@
         font-size: 8px;
     }
 }
-
-
-
-

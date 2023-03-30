@@ -17,51 +17,51 @@
 }
 
 @keyframes rotate {
-    from {
-      transform: rotate(0deg) scale(1);
-    }
-    to {
-      transform: rotate(360deg) scale(1.4);
-    }
+  from {
+    transform: rotate(0deg) scale(1);
   }
+  to {
+    transform: rotate(360deg) scale(1.4);
+  }
+}
 
 
-  @media screen and (min-width: 1024px) and (max-width: 1200px){
-    .loader {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-    }
-  } 
-  @media screen and (min-width: 768px) and (max-width: 1024px){
-    .loader {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 7px dashed rgb(98, 98, 98);
-    }
-  } 
-  @media screen and (min-width: 420px) and (max-width: 768px){
-    .loader {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 6px dashed rgb(98, 98, 98);
-    }
-  } 
-  @media screen and (min-width: 340px) and (max-width: 420px){
-    .loader {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 5px dashed rgb(98, 98, 98);
-    }
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
   }
-  @media screen and (max-width: 340px){
-    .loader {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 4px dashed rgb(98, 98, 98);
-    }
+} 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .loader {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 7px dashed var(--gray-200);
   }
+} 
+@media screen and (min-width: 420px) and (max-width: 768px) {
+  .loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px dashed var(--gray-200);
+  }
+} 
+@media screen and (min-width: 340px) and (max-width: 420px) {
+  .loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px dashed var(--gray-200);
+  }
+}
+@media screen and (max-width: 340px) {
+  .loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px dashed var(--gray-200);
+  }
+}

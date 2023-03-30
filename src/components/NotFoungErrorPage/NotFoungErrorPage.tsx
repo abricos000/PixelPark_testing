@@ -15,6 +15,6 @@ const NotFoungErrorPage = ({click, children}: Props) => (
         <button className={style.btn} onClick={click}>{children}</button>
         </div>
     </div>
-  )
+)
 
 export default NotFoungErrorPage

@@ -6,36 +6,27 @@
     padding: 15px;
     box-sizing: border-box;
 }
-
 .link {
     text-decoration: none;
 }
-
 .title {
     color: var(--gray-100);
     font-weight: normal;
     font-size: 20px;
 }
-
 .title:hover {
     color: var(--green-50);
 }
-
 .userName {
     color: var(--green-100);
     margin-right: 20px;
     font-size: 18px;
 }
-
-.container{
+.container {
     display: flex;
 }
 
-
-@media screen and (min-width: 1024px) and (max-width: 1200px){
-
-} 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .item {
         margin: 10px 0;
         min-height: 120px;
@@ -49,7 +40,7 @@
         font-size: 15px;
     }
 } 
-@media screen and (min-width: 420px) and (max-width: 768px){
+@media screen and (min-width: 420px) and (max-width: 768px) {
     .item {
         margin: 10px 0;
         min-height: 80px;
@@ -63,7 +54,7 @@
         font-size: 13px;
     }
 } 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 420px) {
     .item {
         margin: 10px 0;
         min-height: 60px;
@@ -75,7 +66,5 @@
     .userName {
         margin-right: 10px;
         font-size: 10px;
-
     }
-
 }

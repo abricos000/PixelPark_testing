@@ -14,14 +14,15 @@ const data = {
     title: 'stringggg',
     type: 'string',
     url: 'string',
-
     visible: false
-
 }
+
+describe("Story", () => {
 
     it('Story renders', () => {
         render( <Story story={data} /> )
 
         const linkElement = screen.getByText('stringggg');
         expect(linkElement).toBeInTheDocument();
-    });
+    })
+})

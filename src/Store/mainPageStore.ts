@@ -1,54 +1,48 @@
 import { makeAutoObservable } from 'mobx'
-import { timeConverter } from '../match'
-import { IStory } from '../types/types'
+import { IStory } from '../Types/types'
 import FetchService from './../API/fetchServise'
 
 
 class MainPageStore {
     
     news: IStory[] = []
-    isLoadinп: boolean = true
+    isLoading: boolean = true
     error: boolean = false
 
-    constructor() {
+    constructor () {
         makeAutoObservable(this)
     }
 
-    async getIdNews(bool: boolean) {
+    getIdNews = async () => {
         try {
             this.news = []
             this.error = false;
-            if (bool) {
-                this.isLoadinп = false;
-            }
-            this.getNews(await FetchService.getDataId());
+            this.isLoading = false;
+            await this.getNews(await FetchService.getDataId());
         } catch (error) {
-            if (bool) {
-                this.isLoadinп = true;
-            }
+            this.isLoading = true;
             this.error = true;
         } 
     }
 
-    getNews (idArray: number[]) {
-        Promise.all(idArray.map((element: number) => FetchService.getStory(element)))
-        .then(res => this.sortNews(res))
+    getNews = async (idArray: number[]) => {
+        return Promise.all(idArray.map((element: number) => FetchService.getStory(element)))
+        .then(res => {
+
+            if (res[0]?.error) {
+                throw res
+            }
+            this.news = [...res].sort((a, b) => b.time - a.time) 
+        })
         .catch(() => this.error = true)
-        .finally(() => this.isLoadinп = true)
+        .finally(() => this.isLoading = true)
     }
 
-    sortNews(data: IStory[]) {
-        this.news = [...data].sort((a, b) => b.time - a.time)
-        this.news = this.news.map(el => ({...el, timeData: timeConverter(el.time as number)}))
-    }
-
-    initAutoInterval(){  
-        return  setInterval(async() => {
-            this.getIdNews(false)
-            console.log('автоматическое обновление')
+    initAutoInterval = () => {  
+        return  setInterval( async () => {
+            this.getIdNews()
         }, 60000)
     }
 }
-
 
 export default new MainPageStore();
